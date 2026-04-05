@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: octopus-demo
   namespace: octopus-demo
+  annotations:
+    argo.octopus.com/project: "test"
+    argo.octopus.com/environment: "development"
   labels:
     app: octopus-demo
 spec:
