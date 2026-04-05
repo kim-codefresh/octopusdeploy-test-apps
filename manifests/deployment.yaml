@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: octopus-demo
+  namespace: octopus-demo
+  labels:
+    app: octopus-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: octopus-demo
+  template:
+    metadata:
+      labels:
+        app: octopus-demo
+    spec:
+      containers:
+        - name: web
+          image: nginx:1.27-alpine
+          ports:
+            - containerPort: 80
