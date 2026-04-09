@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: web
-          image: nginx:1.28.1-alpinew
+          image: nginx:1.28-alpine
           ports:
             - containerPort: 80
